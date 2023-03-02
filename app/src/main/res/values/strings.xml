@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">oompas</string>
+    <string name="title">Workers</string>
+    <string name="filterText">Filter</string>
+    <string name="searchMenuTitle">search</string>
+    <string name="gender">F</string>
+    <string name="profession">Developer</string>
+    <string name="mailText">mkaradzas1@visualengin.com</string>
+    <string name="btnSendMailText">Send Mail</string>
+    <string name="textAbout">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"</string>
+    <string name="songLyrics">Song\'s Lyrics</string>
+    <string name="about">About</string>
+</resources>

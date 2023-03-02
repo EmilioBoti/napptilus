@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/btn_filter_corner"
+    android:backgroundTint="@color/gray_light"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:paddingHorizontal="@dimen/dimen_18"
+    android:paddingVertical="@dimen/dimen_18">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/popUpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter by:"
+        android:textStyle="bold"
+        android:textColor="@color/green_dark"
+        android:textSize="@dimen/dimenSt_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/optionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/popUpTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/dimen_8"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="@dimen/dimenSt_16"
+            android:textColor="@color/green_dark"
+            />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/genderFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:singleSelection="true"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profession"
+            android:textSize="@dimen/dimenSt_16"
+            android:textColor="@color/green_dark"
+            />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/proFilterContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleLine="false"
+                app:singleSelection="true"
+                />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="apply"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/optionContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/btn_filter_corner"
+        android:paddingVertical="@dimen/dimen_4"
+        android:paddingHorizontal="@dimen/dimen_12"
+        android:textColor="@color/gray_light"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.memberDetail.MemberDetail">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/dimen_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/detailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+        <View
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200"
+            android:background="@color/gray_light"
+            android:elevation="-2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@id/memberImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/dimen_30"
+            android:elevation="@dimen/dimen_2"
+            android:src="@drawable/member"
+            app:layout_constraintTop_toBottomOf="@id/detailToolbar"
+            android:layout_marginTop="140dp"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:elevation="@dimen/dimen_2"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/memberImage">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/memberName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Elicia Cadanller"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimenSt_22"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/memberProfession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2"
+                tools:text="@string/profession"
+                android:textColor="@color/gray_darker"
+                android:textSize="@dimen/dimenSt_12" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/memberMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/mailText"
+                android:textColor="@color/gray_darker"
+                android:textSize="@dimen/dimenSt_12" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btnSendEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="@string/btnSendMailText"
+                android:textColor="@color/green_dark"
+                app:chipBackgroundColor="@color/white"
+                app:chipEndPadding="@dimen/dimen_20"
+                app:chipStartPadding="@dimen/dimen_20"
+                app:chipStrokeColor="@color/green_dark"
+                app:chipStrokeWidth="@dimen/dimen_1" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:elevation="@dimen/dimen_2"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container1">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_4"
+                android:orientation="horizontal">
+
+                <com.emilio.oompas.uiComponent.DataMember
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:data="Country:"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_4">
+
+                <com.emilio.oompas.uiComponent.DataMember
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:data="Age:"
+                     />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_4">
+
+                <com.emilio.oompas.uiComponent.DataMember
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:data="Height:"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_4">
+
+                <com.emilio.oompas.uiComponent.DataMember
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:data="Gender:"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_30"
+            app:layout_constraintTop_toBottomOf="@id/container2"
+            android:layout_marginTop="@dimen/dimen_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                android:textSize="@dimen/dimenSt_18"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/memberDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimenSt_14"
+                android:layout_marginTop="@dimen/dimen_12"
+                tools:text="@string/textAbout"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/container3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/dimen_30"
+            android:text="@string/songLyrics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimenSt_18"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dimen_20"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginHorizontal="@dimen/dimen_30"
+            app:layout_constraintTop_toBottomOf="@id/titleAbout"
+            android:layout_marginTop="@dimen/dimen_10"
+            app:cardCornerRadius="@dimen/dimen_10"
+            android:elevation="@dimen/dimen_2"
+            app:contentPadding="@dimen/dimen_20"
+            app:cardBackgroundColor="@color/green_dark"
+            android:layout_marginBottom="@dimen/dimen_30"
+            >
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lyrics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/dimenSt_22"
+                        android:textColor="@color/white"
+                        android:lineSpacingExtra="@dimen/dimen_12"
+                        android:layout_marginTop="@dimen/dimen_12"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
